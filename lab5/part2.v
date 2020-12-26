@@ -1,9 +1,11 @@
+/* 
+Circuit using counters to go from 0 to F with active low sync clear, parallel load, and enable. 
+Toggle speed using SW 1 and 0, where 00 is full speed, 01 is 1Hz, 10 is 0.5Hz, and 11 is 0.25Hz. 
+*/
 module part2 (SW, CLOCK_50, HEX0);
 	input [9:0] SW;
 	input CLOCK_50;
 	output [6:0] HEX0;
-	//output [7:0] count; 
-	//output [6:0] y;
 	wire enable;
 	wire [3:0] out;
 	wire reset;
@@ -22,7 +24,7 @@ module part2 (SW, CLOCK_50, HEX0);
 			speed = 11'b0; 
 		else if (SW[0] == 1 && SW[1] == 0)  //1 Hz option
 			speed = 11'd499; //499
-		else if (SW[0] == 0 && SW[1] == 1) // 0.5 Hz option FIX THIS LATER SWITHCES WRONG
+		else if (SW[0] == 0 && SW[1] == 1) // 0.5 Hz option
 			speed = 11'd999;
 		else if (SW[0] == 1 && SW[1] == 1) // 0.25 Hz option
 			speed = 11'd1999;
@@ -68,6 +70,7 @@ module counttof (clk, enable, q, reset);
 	
 endmodule
 
+//hex decoder for the hex displays
 module decoder2 ( input A, B, C, D, output a, b, c, d, e, f, g);
 	assign a = ((~A)&(~B)&(~C)&D) | ((~A)&B&(~C)&(~D)) | (A&(~B)&C&D) | (A&B&(~C)&D);
 	assign b = (B&C&(~D)) | (A&C&D) | (A&B&(~D)) | ((~A)&B&(~C)&D);
