@@ -1,3 +1,8 @@
+/*
+Morse code encoder:
+Take in one of the 8 letters of the alphabet and translate it to the morse code on LEDS (via flashing). Inputs for letters are SW 2-0. 
+KEY[1] acts as the enable, and KEY[0] is the active-low synchronous reset. 
+*/
 module part3 (SW, KEY, LEDR, CLOCK_50);
 	input [2:0] SW;
 	input [3:0] KEY;
