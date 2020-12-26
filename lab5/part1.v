@@ -1,3 +1,11 @@
+/* 8-bit counter incrementing on the positive edge of the clock if the enable signal is on. 
+Resets to 0 when clear_b is low (active low synchronous clear). The following assignments were made:
+clock: KEY[0]
+enable: SW[1]
+clearb: SW[0]
+display on: HEX0 and HEX1
+*/
+
 module part1 (SW, KEY, HEX0, HEX1);
 	input [9:0] SW; 
 	input [3:0] KEY; //push buttons
