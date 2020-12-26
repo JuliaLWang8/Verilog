@@ -1,3 +1,16 @@
+/*
+Rotating shift register that can shift both left and right, has parallel load, active-high reset. 
+Used a subcircuit containing 2 mux's and a D flip-flop, where 1 mux controlled by LoadLeft determines the rotation direction, the other mux ParallelLoadn enables parallel load. 
+If ASRight is enabled, and we are rotating right, then it is an arithmetic shift right. 
+Assignments:
+	- SW7-0: Data in (load for parallel load)
+	- SW9: active high sync reset button
+	- KEY1: ParallelLoadn
+	- KEY2: LoadLeft
+	- KEY3: ASRight
+	- KEY0: clock
+	- LEDs: output display
+*/
 module part3 (SW, KEY, LEDR);
 	input [9:0] SW, LEDR;
 	input [3:0] KEY;
