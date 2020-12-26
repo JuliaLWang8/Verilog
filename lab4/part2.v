@@ -1,7 +1,20 @@
+/*
+Building an ALU with 8 different operations:
+- A+B using an adder
+- A+B using Verilog's + operator
+- Sign extension of B by 8 bits
+- outputting 8'b00000001 if at least 1 bit of the 2 inputs is 1 using a single AND
+- outputting 8'b00000001 if all 8 bits of the 2 inputs are 1 using a single OR
+- left shifting A by B bits
+- A*B using Verilog's * operator
+- holding the current register value
+Store the ALU into an 8 bit register, display result on HEX and LEDs.
+*/
+
 module part2 (SW, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 
 	input [9:0] SW; // 0 to 3 is data, 9 is reset
-	input [3:0] KEY; //push buttons
+	input [3:0] KEY; //push buttons, KEY0 is the clock
 	output [7:0] LEDR; //displays output
 	output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	reg [7:0] ALUout;
