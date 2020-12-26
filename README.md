@@ -12,4 +12,8 @@
 <p style="line-height: 1;">&nbsp; Part 1: gated D latch in Logism and Verilog</p>
 <p style="line-height: 1;">&nbsp; Part 2: Building an ALU with 8-bit register, output to LEDRs, inputs KEYs, SWs</p>
 <p style="line-height: 1;">&nbsp; Part 3: Rotating register with parallel load and choice between rotating left and right</p>
+<p style="line-height: 1;"><strong>Lab 5</strong></p>
+<p style="line-height: 1;">&nbsp; Part 1: 8-bit synchronous counter using T flip flops, display onto hex</p>
+<p style="line-height: 1;">&nbsp; Part 2: Flashing 0 to F on hex display using counters</p>
+<p style="line-height: 1;">&nbsp; Part 3: Morse code encoder</p>
 <p><br></p>
