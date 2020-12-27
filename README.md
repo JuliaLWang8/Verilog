@@ -16,4 +16,6 @@
 <p style="line-height: 1;">&nbsp; Part 1: 8-bit synchronous counter using T flip flops, display onto hex</p>
 <p style="line-height: 1;">&nbsp; Part 2: Flashing 0 to F on hex display using counters</p>
 <p style="line-height: 1;">&nbsp; Part 3: Morse code encoder</p>
+<p style="line-height: 1;"><strong>Lab 6</strong></p>
+<p style="line-height: 1;">&nbsp; Finite State Machine (fsm)</p>
 <p><br></p>
